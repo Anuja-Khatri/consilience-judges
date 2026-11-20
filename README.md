@@ -105,6 +105,10 @@ STUDY_DATA=data python -m pytest -q
 
 The last command re-runs the counts and fails if any published number differs.
 
+## Technical reference
+
+`docs/TECHNICAL_REFERENCE.md` describes the method, every module, the study design, the full results, the design decisions, what to reuse and what not to repeat.
+
 ## Credits
 
 - The multilingual guardrail study and its data: Roya Pakzad and colleagues, with Mozilla.ai. This work only counts what they made public and first described.
