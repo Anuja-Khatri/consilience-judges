@@ -1,0 +1,980 @@
+{
+  "data_commit": "3a6c7df1b85db55099fd1dd513e8ea531682bd79",
+  "data_repository": "royapakzad/multilingual_llm_guardrails",
+  "files_sha256": {
+    "config/flowjudge_criteria.txt": "50cb65b122ee317b7467df5102ee0e640a98cfb02bad7463b80192c067279d6b",
+    "config/glider_pass_criteria.txt": "75a7a787e2768966c5fa0f026d959efcf978b44462201b7b4ce5753987a1550e",
+    "config/glider_rubric.txt": "b86a7a0908fd958f2063e63d75c5f6919765b5e7ede87b1fee29d24ffbd57801",
+    "config/policy.txt": "037f60802c304cb71993ad0f765447e8cab70428e5e2670aebfa77b879c2a49e",
+    "config/policy_fa.txt": "a7563bd5062a562471ee2fb4ac33989c5ef50f16cf768323bc2713be97759575",
+    "config/rubric.txt": "95a202121c5ca14cfa4377829fd4191663d2a85e78745e1873fc24853899ab83",
+    "results/Full Glider GPT results.csv": "ff1a5e555ac319bd26bb37986b0854b052a26d057ccfc95b9ae10f16a39983db",
+    "results/Full Glider Gemini results.csv": "33768c3a861b270b16f3e1e7ecc0c885607879e6fb11458d0789135d0a90b325",
+    "results/Full Glider Mistal results.csv": "09ff088b1abbbdb6b70db8d0ad6d576acec6dfa39e716cf5f9d519e1412194fb"
+  },
+  "method": "judge-grounding-1",
+  "metrics": [
+    {
+      "count": 30,
+      "metric_id": "glider.gemini.en_response.en_policy.judgments",
+      "n": null,
+      "note": "judgments in this cell",
+      "split": "heldout",
+      "value": null
+    },
+    {
+      "count": 310,
+      "metric_id": "glider.gemini.en_response.en_policy.highlights",
+      "n": null,
+      "note": "highlighted phrases parsed",
+      "split": "heldout",
+      "value": null
+    },
+    {
+      "count": 52,
+      "metric_id": "glider.gemini.en_response.en_policy.not_in_input",
+      "n": 310,
+      "note": "highlights found in none of the judge's inputs",
+      "split": "heldout",
+      "value": 0.16774193548387098
+    },
+    {
+      "count": 64,
+      "metric_id": "glider.gemini.en_response.en_policy.not_in_input_strict",
+      "n": 310,
+      "note": "same, with exact case and quote style",
+      "split": "heldout",
+      "value": 0.2064516129032258
+    },
+    {
+      "count": 16,
+      "metric_id": "glider.gemini.en_response.en_policy.judgments_with_any_not_in_input",
+      "n": 28,
+      "note": "judgments with at least one such highlight",
+      "split": "heldout",
+      "value": 0.5714285714285714
+    },
+    {
+      "count": 188,
+      "metric_id": "glider.gemini.en_response.en_policy.in_response",
+      "n": 310,
+      "note": "highlights whose location is response",
+      "split": "heldout",
+      "value": 0.6064516129032258
+    },
+    {
+      "count": 0,
+      "metric_id": "glider.gemini.en_response.en_policy.in_conversation",
+      "n": 310,
+      "note": "highlights whose location is conversation",
+      "split": "heldout",
+      "value": 0.0
+    },
+    {
+      "count": 62,
+      "metric_id": "glider.gemini.en_response.en_policy.in_policy",
+      "n": 310,
+      "note": "highlights whose location is policy",
+      "split": "heldout",
+      "value": 0.2
+    },
+    {
+      "count": 8,
+      "metric_id": "glider.gemini.en_response.en_policy.in_instructions",
+      "n": 310,
+      "note": "highlights whose location is instructions",
+      "split": "heldout",
+      "value": 0.025806451612903226
+    },
+    {
+      "count": 49,
+      "metric_id": "glider.gemini.en_response.en_policy.in_own_reasoning",
+      "n": 310,
+      "note": "highlights whose location is own_reasoning",
+      "split": "heldout",
+      "value": 0.15806451612903225
+    },
+    {
+      "count": 3,
+      "metric_id": "glider.gemini.en_response.en_policy.in_nowhere",
+      "n": 310,
+      "note": "highlights whose location is nowhere",
+      "split": "heldout",
+      "value": 0.00967741935483871
+    },
+    {
+      "count": 52,
+      "metric_id": "glider.gemini.en_response.en_policy.rotated_in_response",
+      "n": 310,
+      "note": "control: highlights found in a different row's response",
+      "split": "heldout",
+      "value": 0.16774193548387098
+    },
+    {
+      "count": 310,
+      "metric_id": "glider.gemini.en_response.en_policy.latin_script_highlights",
+      "n": 310,
+      "note": "highlights written in Latin script",
+      "split": "heldout",
+      "value": 1.0
+    },
+    {
+      "count": 1,
+      "metric_id": "glider.gemini.en_response.en_policy.unparsed_blocks",
+      "n": null,
+      "note": "highlight blocks that were not a list of strings",
+      "split": "heldout",
+      "value": null
+    },
+    {
+      "count": 1,
+      "metric_id": "glider.gemini.en_response.en_policy.judgments_without_highlight_block",
+      "n": 30,
+      "note": "judgments with no highlight block at all",
+      "split": "heldout",
+      "value": 0.03333333333333333
+    },
+    {
+      "count": 30,
+      "metric_id": "glider.gemini.en_response.fa_policy.judgments",
+      "n": null,
+      "note": "judgments in this cell",
+      "split": "heldout",
+      "value": null
+    },
+    {
+      "count": 307,
+      "metric_id": "glider.gemini.en_response.fa_policy.highlights",
+      "n": null,
+      "note": "highlighted phrases parsed",
+      "split": "heldout",
+      "value": null
+    },
+    {
+      "count": 63,
+      "metric_id": "glider.gemini.en_response.fa_policy.not_in_input",
+      "n": 307,
+      "note": "highlights found in none of the judge's inputs",
+      "split": "heldout",
+      "value": 0.20521172638436483
+    },
+    {
+      "count": 77,
+      "metric_id": "glider.gemini.en_response.fa_policy.not_in_input_strict",
+      "n": 307,
+      "note": "same, with exact case and quote style",
+      "split": "heldout",
+      "value": 0.250814332247557
+    },
+    {
+      "count": 16,
+      "metric_id": "glider.gemini.en_response.fa_policy.judgments_with_any_not_in_input",
+      "n": 28,
+      "note": "judgments with at least one such highlight",
+      "split": "heldout",
+      "value": 0.5714285714285714
+    },
+    {
+      "count": 218,
+      "metric_id": "glider.gemini.en_response.fa_policy.in_response",
+      "n": 307,
+      "note": "highlights whose location is response",
+      "split": "heldout",
+      "value": 0.7100977198697068
+    },
+    {
+      "count": 2,
+      "metric_id": "glider.gemini.en_response.fa_policy.in_conversation",
+      "n": 307,
+      "note": "highlights whose location is conversation",
+      "split": "heldout",
+      "value": 0.006514657980456026
+    },
+    {
+      "count": 0,
+      "metric_id": "glider.gemini.en_response.fa_policy.in_policy",
+      "n": 307,
+      "note": "highlights whose location is policy",
+      "split": "heldout",
+      "value": 0.0
+    },
+    {
+      "count": 24,
+      "metric_id": "glider.gemini.en_response.fa_policy.in_instructions",
+      "n": 307,
+      "note": "highlights whose location is instructions",
+      "split": "heldout",
+      "value": 0.0781758957654723
+    },
+    {
+      "count": 51,
+      "metric_id": "glider.gemini.en_response.fa_policy.in_own_reasoning",
+      "n": 307,
+      "note": "highlights whose location is own_reasoning",
+      "split": "heldout",
+      "value": 0.16612377850162866
+    },
+    {
+      "count": 12,
+      "metric_id": "glider.gemini.en_response.fa_policy.in_nowhere",
+      "n": 307,
+      "note": "highlights whose location is nowhere",
+      "split": "heldout",
+      "value": 0.03908794788273615
+    },
+    {
+      "count": 33,
+      "metric_id": "glider.gemini.en_response.fa_policy.rotated_in_response",
+      "n": 307,
+      "note": "control: highlights found in a different row's response",
+      "split": "heldout",
+      "value": 0.10749185667752444
+    },
+    {
+      "count": 307,
+      "metric_id": "glider.gemini.en_response.fa_policy.latin_script_highlights",
+      "n": 307,
+      "note": "highlights written in Latin script",
+      "split": "heldout",
+      "value": 1.0
+    },
+    {
+      "count": 2,
+      "metric_id": "glider.gemini.en_response.fa_policy.unparsed_blocks",
+      "n": null,
+      "note": "highlight blocks that were not a list of strings",
+      "split": "heldout",
+      "value": null
+    },
+    {
+      "count": 1,
+      "metric_id": "glider.gemini.en_response.fa_policy.judgments_without_highlight_block",
+      "n": 30,
+      "note": "judgments with no highlight block at all",
+      "split": "heldout",
+      "value": 0.03333333333333333
+    },
+    {
+      "count": 30,
+      "metric_id": "glider.gemini.fa_response.en_policy.judgments",
+      "n": null,
+      "note": "judgments in this cell",
+      "split": "heldout",
+      "value": null
+    },
+    {
+      "count": 372,
+      "metric_id": "glider.gemini.fa_response.en_policy.highlights",
+      "n": null,
+      "note": "highlighted phrases parsed",
+      "split": "heldout",
+      "value": null
+    },
+    {
+      "count": 115,
+      "metric_id": "glider.gemini.fa_response.en_policy.not_in_input",
+      "n": 372,
+      "note": "highlights found in none of the judge's inputs",
+      "split": "heldout",
+      "value": 0.30913978494623656
+    },
+    {
+      "count": 117,
+      "metric_id": "glider.gemini.fa_response.en_policy.not_in_input_strict",
+      "n": 372,
+      "note": "same, with exact case and quote style",
+      "split": "heldout",
+      "value": 0.31451612903225806
+    },
+    {
+      "count": 25,
+      "metric_id": "glider.gemini.fa_response.en_policy.judgments_with_any_not_in_input",
+      "n": 29,
+      "note": "judgments with at least one such highlight",
+      "split": "heldout",
+      "value": 0.8620689655172413
+    },
+    {
+      "count": 23,
+      "metric_id": "glider.gemini.fa_response.en_policy.in_response",
+      "n": 372,
+      "note": "highlights whose location is response",
+      "split": "heldout",
+      "value": 0.06182795698924731
+    },
+    {
+      "count": 0,
+      "metric_id": "glider.gemini.fa_response.en_policy.in_conversation",
+      "n": 372,
+      "note": "highlights whose location is conversation",
+      "split": "heldout",
+      "value": 0.0
+    },
+    {
+      "count": 232,
+      "metric_id": "glider.gemini.fa_response.en_policy.in_policy",
+      "n": 372,
+      "note": "highlights whose location is policy",
+      "split": "heldout",
+      "value": 0.6236559139784946
+    },
+    {
+      "count": 2,
+      "metric_id": "glider.gemini.fa_response.en_policy.in_instructions",
+      "n": 372,
+      "note": "highlights whose location is instructions",
+      "split": "heldout",
+      "value": 0.005376344086021506
+    },
+    {
+      "count": 93,
+      "metric_id": "glider.gemini.fa_response.en_policy.in_own_reasoning",
+      "n": 372,
+      "note": "highlights whose location is own_reasoning",
+      "split": "heldout",
+      "value": 0.25
+    },
+    {
+      "count": 22,
+      "metric_id": "glider.gemini.fa_response.en_policy.in_nowhere",
+      "n": 372,
+      "note": "highlights whose location is nowhere",
+      "split": "heldout",
+      "value": 0.05913978494623656
+    },
+    {
+      "count": 6,
+      "metric_id": "glider.gemini.fa_response.en_policy.rotated_in_response",
+      "n": 372,
+      "note": "control: highlights found in a different row's response",
+      "split": "heldout",
+      "value": 0.016129032258064516
+    },
+    {
+      "count": 369,
+      "metric_id": "glider.gemini.fa_response.en_policy.latin_script_highlights",
+      "n": 372,
+      "note": "highlights written in Latin script",
+      "split": "heldout",
+      "value": 0.9919354838709677
+    },
+    {
+      "count": 1,
+      "metric_id": "glider.gemini.fa_response.en_policy.unparsed_blocks",
+      "n": null,
+      "note": "highlight blocks that were not a list of strings",
+      "split": "heldout",
+      "value": null
+    },
+    {
+      "count": 1,
+      "metric_id": "glider.gemini.fa_response.en_policy.judgments_without_highlight_block",
+      "n": 30,
+      "note": "judgments with no highlight block at all",
+      "split": "heldout",
+      "value": 0.03333333333333333
+    },
+    {
+      "count": 30,
+      "metric_id": "glider.gemini.fa_response.fa_policy.judgments",
+      "n": null,
+      "note": "judgments in this cell",
+      "split": "heldout",
+      "value": null
+    },
+    {
+      "count": 663,
+      "metric_id": "glider.gemini.fa_response.fa_policy.highlights",
+      "n": null,
+      "note": "highlighted phrases parsed",
+      "split": "heldout",
+      "value": null
+    },
+    {
+      "count": 419,
+      "metric_id": "glider.gemini.fa_response.fa_policy.not_in_input",
+      "n": 663,
+      "note": "highlights found in none of the judge's inputs",
+      "split": "heldout",
+      "value": 0.6319758672699849
+    },
+    {
+      "count": 504,
+      "metric_id": "glider.gemini.fa_response.fa_policy.not_in_input_strict",
+      "n": 663,
+      "note": "same, with exact case and quote style",
+      "split": "heldout",
+      "value": 0.7601809954751131
+    },
+    {
+      "count": 29,
+      "metric_id": "glider.gemini.fa_response.fa_policy.judgments_with_any_not_in_input",
+      "n": 29,
+      "note": "judgments with at least one such highlight",
+      "split": "heldout",
+      "value": 1.0
+    },
+    {
+      "count": 71,
+      "metric_id": "glider.gemini.fa_response.fa_policy.in_response",
+      "n": 663,
+      "note": "highlights whose location is response",
+      "split": "heldout",
+      "value": 0.10708898944193061
+    },
+    {
+      "count": 0,
+      "metric_id": "glider.gemini.fa_response.fa_policy.in_conversation",
+      "n": 663,
+      "note": "highlights whose location is conversation",
+      "split": "heldout",
+      "value": 0.0
+    },
+    {
+      "count": 1,
+      "metric_id": "glider.gemini.fa_response.fa_policy.in_policy",
+      "n": 663,
+      "note": "highlights whose location is policy",
+      "split": "heldout",
+      "value": 0.0015082956259426848
+    },
+    {
+      "count": 172,
+      "metric_id": "glider.gemini.fa_response.fa_policy.in_instructions",
+      "n": 663,
+      "note": "highlights whose location is instructions",
+      "split": "heldout",
+      "value": 0.2594268476621418
+    },
+    {
+      "count": 336,
+      "metric_id": "glider.gemini.fa_response.fa_policy.in_own_reasoning",
+      "n": 663,
+      "note": "highlights whose location is own_reasoning",
+      "split": "heldout",
+      "value": 0.5067873303167421
+    },
+    {
+      "count": 83,
+      "metric_id": "glider.gemini.fa_response.fa_policy.in_nowhere",
+      "n": 663,
+      "note": "highlights whose location is nowhere",
+      "split": "heldout",
+      "value": 0.12518853695324283
+    },
+    {
+      "count": 4,
+      "metric_id": "glider.gemini.fa_response.fa_policy.rotated_in_response",
+      "n": 663,
+      "note": "control: highlights found in a different row's response",
+      "split": "heldout",
+      "value": 0.006033182503770739
+    },
+    {
+      "count": 657,
+      "metric_id": "glider.gemini.fa_response.fa_policy.latin_script_highlights",
+      "n": 663,
+      "note": "highlights written in Latin script",
+      "split": "heldout",
+      "value": 0.9909502262443439
+    },
+    {
+      "count": 0,
+      "metric_id": "glider.gemini.fa_response.fa_policy.unparsed_blocks",
+      "n": null,
+      "note": "highlight blocks that were not a list of strings",
+      "split": "heldout",
+      "value": null
+    },
+    {
+      "count": 1,
+      "metric_id": "glider.gemini.fa_response.fa_policy.judgments_without_highlight_block",
+      "n": 30,
+      "note": "judgments with no highlight block at all",
+      "split": "heldout",
+      "value": 0.03333333333333333
+    },
+    {
+      "count": 30,
+      "metric_id": "glider.mistral.en_response.en_policy.judgments",
+      "n": null,
+      "note": "judgments in this cell",
+      "split": "heldout",
+      "value": null
+    },
+    {
+      "count": 300,
+      "metric_id": "glider.mistral.en_response.en_policy.highlights",
+      "n": null,
+      "note": "highlighted phrases parsed",
+      "split": "heldout",
+      "value": null
+    },
+    {
+      "count": 35,
+      "metric_id": "glider.mistral.en_response.en_policy.not_in_input",
+      "n": 300,
+      "note": "highlights found in none of the judge's inputs",
+      "split": "heldout",
+      "value": 0.11666666666666667
+    },
+    {
+      "count": 56,
+      "metric_id": "glider.mistral.en_response.en_policy.not_in_input_strict",
+      "n": 300,
+      "note": "same, with exact case and quote style",
+      "split": "heldout",
+      "value": 0.18666666666666668
+    },
+    {
+      "count": 19,
+      "metric_id": "glider.mistral.en_response.en_policy.judgments_with_any_not_in_input",
+      "n": 28,
+      "note": "judgments with at least one such highlight",
+      "split": "heldout",
+      "value": 0.6785714285714286
+    },
+    {
+      "count": 185,
+      "metric_id": "glider.mistral.en_response.en_policy.in_response",
+      "n": 300,
+      "note": "highlights whose location is response",
+      "split": "heldout",
+      "value": 0.6166666666666667
+    },
+    {
+      "count": 5,
+      "metric_id": "glider.mistral.en_response.en_policy.in_conversation",
+      "n": 300,
+      "note": "highlights whose location is conversation",
+      "split": "heldout",
+      "value": 0.016666666666666666
+    },
+    {
+      "count": 70,
+      "metric_id": "glider.mistral.en_response.en_policy.in_policy",
+      "n": 300,
+      "note": "highlights whose location is policy",
+      "split": "heldout",
+      "value": 0.23333333333333334
+    },
+    {
+      "count": 5,
+      "metric_id": "glider.mistral.en_response.en_policy.in_instructions",
+      "n": 300,
+      "note": "highlights whose location is instructions",
+      "split": "heldout",
+      "value": 0.016666666666666666
+    },
+    {
+      "count": 26,
+      "metric_id": "glider.mistral.en_response.en_policy.in_own_reasoning",
+      "n": 300,
+      "note": "highlights whose location is own_reasoning",
+      "split": "heldout",
+      "value": 0.08666666666666667
+    },
+    {
+      "count": 9,
+      "metric_id": "glider.mistral.en_response.en_policy.in_nowhere",
+      "n": 300,
+      "note": "highlights whose location is nowhere",
+      "split": "heldout",
+      "value": 0.03
+    },
+    {
+      "count": 44,
+      "metric_id": "glider.mistral.en_response.en_policy.rotated_in_response",
+      "n": 300,
+      "note": "control: highlights found in a different row's response",
+      "split": "heldout",
+      "value": 0.14666666666666667
+    },
+    {
+      "count": 300,
+      "metric_id": "glider.mistral.en_response.en_policy.latin_script_highlights",
+      "n": 300,
+      "note": "highlights written in Latin script",
+      "split": "heldout",
+      "value": 1.0
+    },
+    {
+      "count": 2,
+      "metric_id": "glider.mistral.en_response.en_policy.unparsed_blocks",
+      "n": null,
+      "note": "highlight blocks that were not a list of strings",
+      "split": "heldout",
+      "value": null
+    },
+    {
+      "count": 0,
+      "metric_id": "glider.mistral.en_response.en_policy.judgments_without_highlight_block",
+      "n": 30,
+      "note": "judgments with no highlight block at all",
+      "split": "heldout",
+      "value": 0.0
+    },
+    {
+      "count": 30,
+      "metric_id": "glider.mistral.en_response.fa_policy.judgments",
+      "n": null,
+      "note": "judgments in this cell",
+      "split": "heldout",
+      "value": null
+    },
+    {
+      "count": 352,
+      "metric_id": "glider.mistral.en_response.fa_policy.highlights",
+      "n": null,
+      "note": "highlighted phrases parsed",
+      "split": "heldout",
+      "value": null
+    },
+    {
+      "count": 104,
+      "metric_id": "glider.mistral.en_response.fa_policy.not_in_input",
+      "n": 352,
+      "note": "highlights found in none of the judge's inputs",
+      "split": "heldout",
+      "value": 0.29545454545454547
+    },
+    {
+      "count": 127,
+      "metric_id": "glider.mistral.en_response.fa_policy.not_in_input_strict",
+      "n": 352,
+      "note": "same, with exact case and quote style",
+      "split": "heldout",
+      "value": 0.36079545454545453
+    },
+    {
+      "count": 15,
+      "metric_id": "glider.mistral.en_response.fa_policy.judgments_with_any_not_in_input",
+      "n": 30,
+      "note": "judgments with at least one such highlight",
+      "split": "heldout",
+      "value": 0.5
+    },
+    {
+      "count": 235,
+      "metric_id": "glider.mistral.en_response.fa_policy.in_response",
+      "n": 352,
+      "note": "highlights whose location is response",
+      "split": "heldout",
+      "value": 0.6676136363636364
+    },
+    {
+      "count": 4,
+      "metric_id": "glider.mistral.en_response.fa_policy.in_conversation",
+      "n": 352,
+      "note": "highlights whose location is conversation",
+      "split": "heldout",
+      "value": 0.011363636363636364
+    },
+    {
+      "count": 0,
+      "metric_id": "glider.mistral.en_response.fa_policy.in_policy",
+      "n": 352,
+      "note": "highlights whose location is policy",
+      "split": "heldout",
+      "value": 0.0
+    },
+    {
+      "count": 9,
+      "metric_id": "glider.mistral.en_response.fa_policy.in_instructions",
+      "n": 352,
+      "note": "highlights whose location is instructions",
+      "split": "heldout",
+      "value": 0.02556818181818182
+    },
+    {
+      "count": 88,
+      "metric_id": "glider.mistral.en_response.fa_policy.in_own_reasoning",
+      "n": 352,
+      "note": "highlights whose location is own_reasoning",
+      "split": "heldout",
+      "value": 0.25
+    },
+    {
+      "count": 16,
+      "metric_id": "glider.mistral.en_response.fa_policy.in_nowhere",
+      "n": 352,
+      "note": "highlights whose location is nowhere",
+      "split": "heldout",
+      "value": 0.045454545454545456
+    },
+    {
+      "count": 40,
+      "metric_id": "glider.mistral.en_response.fa_policy.rotated_in_response",
+      "n": 352,
+      "note": "control: highlights found in a different row's response",
+      "split": "heldout",
+      "value": 0.11363636363636363
+    },
+    {
+      "count": 352,
+      "metric_id": "glider.mistral.en_response.fa_policy.latin_script_highlights",
+      "n": 352,
+      "note": "highlights written in Latin script",
+      "split": "heldout",
+      "value": 1.0
+    },
+    {
+      "count": 0,
+      "metric_id": "glider.mistral.en_response.fa_policy.unparsed_blocks",
+      "n": null,
+      "note": "highlight blocks that were not a list of strings",
+      "split": "heldout",
+      "value": null
+    },
+    {
+      "count": 0,
+      "metric_id": "glider.mistral.en_response.fa_policy.judgments_without_highlight_block",
+      "n": 30,
+      "note": "judgments with no highlight block at all",
+      "split": "heldout",
+      "value": 0.0
+    },
+    {
+      "count": 30,
+      "metric_id": "glider.mistral.fa_response.en_policy.judgments",
+      "n": null,
+      "note": "judgments in this cell",
+      "split": "heldout",
+      "value": null
+    },
+    {
+      "count": 821,
+      "metric_id": "glider.mistral.fa_response.en_policy.highlights",
+      "n": null,
+      "note": "highlighted phrases parsed",
+      "split": "heldout",
+      "value": null
+    },
+    {
+      "count": 308,
+      "metric_id": "glider.mistral.fa_response.en_policy.not_in_input",
+      "n": 821,
+      "note": "highlights found in none of the judge's inputs",
+      "split": "heldout",
+      "value": 0.3751522533495737
+    },
+    {
+      "count": 313,
+      "metric_id": "glider.mistral.fa_response.en_policy.not_in_input_strict",
+      "n": 821,
+      "note": "same, with exact case and quote style",
+      "split": "heldout",
+      "value": 0.3812423873325213
+    },
+    {
+      "count": 28,
+      "metric_id": "glider.mistral.fa_response.en_policy.judgments_with_any_not_in_input",
+      "n": 30,
+      "note": "judgments with at least one such highlight",
+      "split": "heldout",
+      "value": 0.9333333333333333
+    },
+    {
+      "count": 2,
+      "metric_id": "glider.mistral.fa_response.en_policy.in_response",
+      "n": 821,
+      "note": "highlights whose location is response",
+      "split": "heldout",
+      "value": 0.00243605359317905
+    },
+    {
+      "count": 0,
+      "metric_id": "glider.mistral.fa_response.en_policy.in_conversation",
+      "n": 821,
+      "note": "highlights whose location is conversation",
+      "split": "heldout",
+      "value": 0.0
+    },
+    {
+      "count": 467,
+      "metric_id": "glider.mistral.fa_response.en_policy.in_policy",
+      "n": 821,
+      "note": "highlights whose location is policy",
+      "split": "heldout",
+      "value": 0.5688185140073082
+    },
+    {
+      "count": 44,
+      "metric_id": "glider.mistral.fa_response.en_policy.in_instructions",
+      "n": 821,
+      "note": "highlights whose location is instructions",
+      "split": "heldout",
+      "value": 0.0535931790499391
+    },
+    {
+      "count": 230,
+      "metric_id": "glider.mistral.fa_response.en_policy.in_own_reasoning",
+      "n": 821,
+      "note": "highlights whose location is own_reasoning",
+      "split": "heldout",
+      "value": 0.2801461632155907
+    },
+    {
+      "count": 78,
+      "metric_id": "glider.mistral.fa_response.en_policy.in_nowhere",
+      "n": 821,
+      "note": "highlights whose location is nowhere",
+      "split": "heldout",
+      "value": 0.09500609013398295
+    },
+    {
+      "count": 0,
+      "metric_id": "glider.mistral.fa_response.en_policy.rotated_in_response",
+      "n": 821,
+      "note": "control: highlights found in a different row's response",
+      "split": "heldout",
+      "value": 0.0
+    },
+    {
+      "count": 815,
+      "metric_id": "glider.mistral.fa_response.en_policy.latin_script_highlights",
+      "n": 821,
+      "note": "highlights written in Latin script",
+      "split": "heldout",
+      "value": 0.9926918392204629
+    },
+    {
+      "count": 4,
+      "metric_id": "glider.mistral.fa_response.en_policy.unparsed_blocks",
+      "n": null,
+      "note": "highlight blocks that were not a list of strings",
+      "split": "heldout",
+      "value": null
+    },
+    {
+      "count": 0,
+      "metric_id": "glider.mistral.fa_response.en_policy.judgments_without_highlight_block",
+      "n": 30,
+      "note": "judgments with no highlight block at all",
+      "split": "heldout",
+      "value": 0.0
+    },
+    {
+      "count": 30,
+      "metric_id": "glider.mistral.fa_response.fa_policy.judgments",
+      "n": null,
+      "note": "judgments in this cell",
+      "split": "heldout",
+      "value": null
+    },
+    {
+      "count": 414,
+      "metric_id": "glider.mistral.fa_response.fa_policy.highlights",
+      "n": null,
+      "note": "highlighted phrases parsed",
+      "split": "heldout",
+      "value": null
+    },
+    {
+      "count": 281,
+      "metric_id": "glider.mistral.fa_response.fa_policy.not_in_input",
+      "n": 414,
+      "note": "highlights found in none of the judge's inputs",
+      "split": "heldout",
+      "value": 0.678743961352657
+    },
+    {
+      "count": 298,
+      "metric_id": "glider.mistral.fa_response.fa_policy.not_in_input_strict",
+      "n": 414,
+      "note": "same, with exact case and quote style",
+      "split": "heldout",
+      "value": 0.7198067632850241
+    },
+    {
+      "count": 29,
+      "metric_id": "glider.mistral.fa_response.fa_policy.judgments_with_any_not_in_input",
+      "n": 30,
+      "note": "judgments with at least one such highlight",
+      "split": "heldout",
+      "value": 0.9666666666666667
+    },
+    {
+      "count": 77,
+      "metric_id": "glider.mistral.fa_response.fa_policy.in_response",
+      "n": 414,
+      "note": "highlights whose location is response",
+      "split": "heldout",
+      "value": 0.1859903381642512
+    },
+    {
+      "count": 0,
+      "metric_id": "glider.mistral.fa_response.fa_policy.in_conversation",
+      "n": 414,
+      "note": "highlights whose location is conversation",
+      "split": "heldout",
+      "value": 0.0
+    },
+    {
+      "count": 1,
+      "metric_id": "glider.mistral.fa_response.fa_policy.in_policy",
+      "n": 414,
+      "note": "highlights whose location is policy",
+      "split": "heldout",
+      "value": 0.0024154589371980675
+    },
+    {
+      "count": 55,
+      "metric_id": "glider.mistral.fa_response.fa_policy.in_instructions",
+      "n": 414,
+      "note": "highlights whose location is instructions",
+      "split": "heldout",
+      "value": 0.13285024154589373
+    },
+    {
+      "count": 244,
+      "metric_id": "glider.mistral.fa_response.fa_policy.in_own_reasoning",
+      "n": 414,
+      "note": "highlights whose location is own_reasoning",
+      "split": "heldout",
+      "value": 0.5893719806763285
+    },
+    {
+      "count": 37,
+      "metric_id": "glider.mistral.fa_response.fa_policy.in_nowhere",
+      "n": 414,
+      "note": "highlights whose location is nowhere",
+      "split": "heldout",
+      "value": 0.0893719806763285
+    },
+    {
+      "count": 3,
+      "metric_id": "glider.mistral.fa_response.fa_policy.rotated_in_response",
+      "n": 414,
+      "note": "control: highlights found in a different row's response",
+      "split": "heldout",
+      "value": 0.007246376811594203
+    },
+    {
+      "count": 412,
+      "metric_id": "glider.mistral.fa_response.fa_policy.latin_script_highlights",
+      "n": 414,
+      "note": "highlights written in Latin script",
+      "split": "heldout",
+      "value": 0.9951690821256038
+    },
+    {
+      "count": 0,
+      "metric_id": "glider.mistral.fa_response.fa_policy.unparsed_blocks",
+      "n": null,
+      "note": "highlight blocks that were not a list of strings",
+      "split": "heldout",
+      "value": null
+    },
+    {
+      "count": 0,
+      "metric_id": "glider.mistral.fa_response.fa_policy.judgments_without_highlight_block",
+      "n": 30,
+      "note": "judgments with no highlight block at all",
+      "split": "heldout",
+      "value": 0.0
+    }
+  ],
+  "results_sha256": "7ef5b0c2ea9befc0f4fd556a5fa179271d6dda5d224b3329063ab9f2f18e17ed",
+  "splits_run": "heldout"
+}
