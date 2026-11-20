@@ -10,7 +10,7 @@ No model is called. No network is used. The package has no dependencies outside 
 
 ## Why
 
-In 2026 researchers at Mozilla.ai published a study of guardrail judges on asylum-related questions in English and Farsi, with their data ([blog post](https://blog.mozilla.ai/evaluating-multilingual-context-aware-guardrails-evidence-from-a-humanitarian-llm-use-case/), [data](https://github.com/royapakzad/multilingual_llm_guardrails)). They reported, with examples, that a judge cited terms that "never appeared in the original response". This repository adds a count to that observation and a tool that makes the same check on any verdict.
+In 2026 a study of guardrail judges on asylum-related questions in English and Farsi was published on Mozilla.ai's blog, with its data ([blog post](https://blog.mozilla.ai/evaluating-multilingual-context-aware-guardrails-evidence-from-a-humanitarian-llm-use-case/), [data](https://github.com/royapakzad/multilingual_llm_guardrails)). The authors reported, with examples, that a judge cited terms that "never appeared in the original response". This repository adds a count to that observation and a tool that makes the same check on any verdict.
 
 ## What was measured
 
