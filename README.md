@@ -8,6 +8,16 @@ Status: pre-alpha.
 
 No model is called. No network is used. The package has no dependencies outside the Python standard library. The same input gives the same output. The verdict is never changed.
 
+## At a glance
+
+- **What it checks:** when an LLM guardrail judge explains a verdict, it cites evidence as highlighted or quoted phrases. This tool checks, with fixed rules, whether each cited phrase is really in what the judge was given.
+- **Why it matters:** people trust a judge's explanation as much as its verdict. Evidence that is not in the input makes the explanation unreliable, even when the verdict happens to be right.
+- **Who it is for:** teams running guardrail or LLM judges, including through Mozilla.ai's any-guardrail.
+- **Tested on:** a public Mozilla.ai study of guardrail judges on asylum-related questions in English and Farsi. Results for the GLIDER judge are below.
+- **Try it:** `pip install git+https://github.com/Anuja-Khatri/consilience-judges`. Standard library only, no model, no network.
+
+Part of [The Consilience](https://theconsilience.io), a verification layer for AI-for-science. All public repos: [github.com/Anuja-Khatri](https://github.com/Anuja-Khatri).
+
 ## Why
 
 In 2026 a study of guardrail judges on asylum-related questions in English and Farsi was published on Mozilla.ai's blog, with its data ([blog post](https://blog.mozilla.ai/evaluating-multilingual-context-aware-guardrails-evidence-from-a-humanitarian-llm-use-case/), [data](https://github.com/royapakzad/multilingual_llm_guardrails)). The authors reported, with examples, that a judge cited terms that "never appeared in the original response". This repository adds a count to that observation and a tool that makes the same check on any verdict.
